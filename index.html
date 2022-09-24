@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head style="text-align:center">
+<style>
+    label{
+        display: inline-block;
+        float: left;
+        clear: left;
+        width: 250px;
+        text-align: right;
+    }
+    input {
+        display: inline-block;
+        float: left;
+    }
+    .myDiv {
+        border-radius: 25px;
+        margin: auto;
+        width: 700px;
+        height: 300px;
+        border: 5px outset rgb(0, 153, 255);
+        background-color: lightblue;    
+        text-align: center;
+    }
+    </style>
 <title>Page Title</title>
 <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
 <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 <link rel="stylesheet" href="mystyle.css">
 </head>
+<div class="myDiv">
 <body>
 <h1>Final Grade Calculator</h1>
 <p>Input scores below...</p>
@@ -15,13 +38,13 @@
     <label for="inputDesired">Desired Grade: </label>
     <input type="number" id="inputDesired" name="inputDesired"><br><br>
     <label for="finalPercent">Final is worth: </label>
-    <input type="number" id="finalPercent" name="finalPercent">
+    <input type="number" id="finalPercent" name="finalPercent">%
     <label for="finalPercent">%</label><br><br>
     <label for="neededFinal">You need a: </label>
-    <input type="number" id="neededFinal" name="neededFinal">
+    <input type="number" id="neededFinal" name="neededFinal">to pass.
     <label for="neededFinal"> to pass.</label> 
-    <py-script>print(inputCurrent)</py-script>
+    </div>
 </form>
-</style>
+</body>
 </body>
 </html>
