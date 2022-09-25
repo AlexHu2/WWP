@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head style="text-align:center">
+<head>
 <style>
     label{
         display: inline-block;
@@ -14,13 +14,36 @@
         float: left;
     }
     .myDiv {
+        padding: 20px;
+        float: down;
         border-radius: 25px;
         margin: auto;
         width: 700px;
-        height: 300px;
         border: 5px outset rgb(0, 153, 255);
         background-color: lightblue;    
         text-align: center;
+        }
+    .button {
+        border-radius: 10px;
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    .button2 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #008CBA;
+    }
+    .button2:hover {
+        background-color: #008CBA;
+        color: white;
     }
     </style>
 <title>Page Title</title>
@@ -34,15 +57,12 @@
 <p>Input scores below...</p>
 <form>
     <label for="inputCurrent">Current Grade: </label>
-    <input type="number" id="inputCurrent" name="inputCurrent"><br><br>
+    <input type="number" id="inputCurrent" name="inputCurrent" placeholder="%"><br><br>
     <label for="inputDesired">Desired Grade: </label>
-    <input type="number" id="inputDesired" name="inputDesired"><br><br>
+    <input type="number" id="inputDesired" name="inputDesired" placeholder="%"><br><br>
     <label for="finalPercent">Final is worth: </label>
-    <input type="number" id="finalPercent" name="finalPercent">%
-    <label for="finalPercent">%</label><br><br>
-    <label for="neededFinal">You need a: </label>
-    <input type="number" id="neededFinal" name="neededFinal">to pass.
-    <label for="neededFinal"> to pass.</label> 
+    <input type="number" id="finalPercent" name="finalPercent" placeholder="%"><br>
+    <button class="button button2">Submit</button>
     </div>
 </form>
 </body>
