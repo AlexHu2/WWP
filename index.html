@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
+<audio id="audioContainer"> <source src="vineboom.mp3" type="audio/mpeg"> </audio>
 <head>
 <title>Page Title</title>
-<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+<audio src="${https://www.youtube.com/watch?v=_vBVGjFdwk4}" id="audio"></audio>
 <link rel="stylesheet" href="mystyle.css">
 </head>
 <div class="myDiv">
@@ -17,7 +17,7 @@
     <input type="number" id="inputDesired" name="inputDesired" placeholder="%"><br><br>
     <label for="finalPercent">Final is worth: </label>
     <input type="number" id="finalPercent" name="finalPercent" placeholder="%"><br><br>
-    <button class="button button2" onclick="calculateNeeded(document.getElementById('inputCurrent').value, 
+    <button class="button button2" onclick="playAudio(); calculateNeeded(document.getElementById('inputCurrent').value, 
                                                             document.getElementById('inputDesired').value, 
                                                             document.getElementById('finalPercent').value)">Submit
     </button><br>
@@ -31,6 +31,13 @@
     var desiredGrade = inputDesired;
     var neededFinal = (desiredGrade - overallPercent * currentGrade)/(finalPercent/100);
     alert("You will need a " + neededFinal + " to pass with a " + desiredGrade);     
+}
+</script>
+<script>
+    const audioContainer = document.getElementById("audioContainer")
+    function playAudio() {
+        audioContainer.play();
+        
 }
 </script>
 </body>
